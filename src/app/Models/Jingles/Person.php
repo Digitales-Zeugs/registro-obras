@@ -13,6 +13,8 @@ class Person extends Model
         'name',
         'address',
         'phone',
+        'phone_area',
+        'phone_country',
         'email',
         'editable'
     ];

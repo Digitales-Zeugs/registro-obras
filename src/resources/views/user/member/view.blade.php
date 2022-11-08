@@ -127,9 +127,27 @@
                     </div>
                 </div>
                 <div class="form-group row">
-                    <label for="landline" class="col-12 col-sm-3 col-form-label">Teléfono***</label>
+                    <label for="landline_country" class="col-12 col-sm-3 col-form-label">Cod País</label>
+                    <div class="col-12 col-sm-3">
+                        <div class="form-control">{{ $request->landline_country }}</div>
+                    </div>
+                    <label for="landline_area" class="col-12 col-sm-3 col-form-label">Cod Área</label>
+                    <div class="col-12 col-sm-3">
+                        <div class="form-control">{{ $request->landline_area }}</div>
+                    </div>
+                    <label for="landline" class="col-12 col-sm-3 col-form-label">Teléfono</label>
                     <div class="col-12 col-sm-3">
                         <div class="form-control">{{ $request->landline }}</div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                <label for="mobile_country" class="col-12 col-sm-3 col-form-label">Cod País</label>
+                    <div class="col-12 col-sm-3">
+                        <div class="form-control">{{ $request->mobile_country }}</div>
+                    </div>
+                    <label for="mobile_area" class="col-12 col-sm-3 col-form-label">Cod Área</label>
+                    <div class="col-12 col-sm-3">
+                        <div class="form-control">{{ $request->mobile_area }}</div>
                     </div>
                     <label for="mobile" class="col-12 col-sm-3 col-form-label">Celular</label>
                     <div class="col-12 col-sm-3">

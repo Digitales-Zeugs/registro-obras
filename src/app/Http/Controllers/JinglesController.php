@@ -126,6 +126,8 @@ class JinglesController extends Controller
                 $parts['applicant']['email'] = Auth::user()->sadaic->email;
                 $parts['applicant']['name'] = Auth::user()->sadaic->nombre;
                 $parts['applicant']['phone'] = '';
+                $parts['applicant']['phone_area'] = '';
+                $parts['applicant']['phone_country'] = '';
             }
 
             foreach($parts as $type => $personParams) {

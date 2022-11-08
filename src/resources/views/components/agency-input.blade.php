@@ -37,7 +37,8 @@ $editable = old($type . '.editable', optional($registration->{ $type })->editabl
                 <div class="input-group-prepend">
                     <span class="input-group-text">+</span>
                 </div>
-                <input type="number" class="form-control no-arrows phone_country" name="phone_country" min="0" value="54" required>
+                <input type="text" class="form-control" name="{{ $type }}[phone_country]" id="{{ $type }}phone_country"
+                value="{{ old($type . '.phone_country', optional($registration->{ $type })->phone_country) }}" {{ $editable ? '' : 'disabled' }}>
             </div>
         </div>
         <div class="form-group col-12 col-sm-3">
@@ -46,7 +47,8 @@ $editable = old($type . '.editable', optional($registration->{ $type })->editabl
                 <div class="input-group-prepend">
                     <span class="input-group-text">(</span>
                 </div>
-                <input type="number" class="form-control no-arrows phone_area" name="phone_area" min="0" required>
+                <input type="text" class="form-control" name="{{ $type }}[phone_area]" id="{{ $type }}_phone_area"
+                value="{{ old($type . '.phone_area', optional($registration->{ $type })->phone_area) }}" {{ $editable ? '' : 'disabled' }}>
                 <div class="input-group-append">
                     <span class="input-group-text">)</span>
                 </div>
@@ -54,8 +56,10 @@ $editable = old($type . '.editable', optional($registration->{ $type })->editabl
         </div>
         <div class="form-group col-12 col-sm-3">
             <label for="phone_number">Número</label>
-            <input type="number" class="form-control no-arrows phone_number" name="phone_number" min="0" required>
+            <input type="text" class="form-control" name="{{ $type }}[phone]" id="{{ $type }}_phone"
+                value="{{ old($type . '.phone', optional($registration->{ $type })->phone) }}" {{ $editable ? '' : 'disabled' }}>
         </div>
+
 
     </div>
 

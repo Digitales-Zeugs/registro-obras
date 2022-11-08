@@ -160,21 +160,21 @@
 
                 <label for="landline" class="col-12 col-sm-3 col-form-label">Teléfono</label>
                     <div class="form-group col-12 col-sm-3">
-                        <label for="phone_country">Cod País *</label>
+                        <label for="landline_country">Cod País *</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">+</span>
                             </div>
-                            <input type="number" class="form-control no-arrows phone_country" name="phone_country" min="0" value="54" required>
+                            <input type="number" class="form-control no-arrows phone_number" name="landline_country" min="0" value="54" required>
                         </div>
                     </div>
                     <div class="form-group col-12 col-sm-3">
-                        <label for="phone_area">Cod Área *</label>
+                        <label for="landline_area">Cod Área *</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text">(</span>
                             </div>
-                            <input type="number" class="form-control no-arrows phone_area" name="phone_area" min="0" required>
+                            <input type="number" class="form-control no-arrows phone_number" name="landline_area" min="0" required>
                             <div class="input-group-append">
                                 <span class="input-group-text">)</span>
                             </div>
@@ -193,7 +193,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">+</span>
                             </div>
-                            <input type="number" class="form-control no-arrows phone_country" name="phone_country" min="0" value="54" required>
+                            <input type="number" class="form-control no-arrows phone_number" name="mobile_country" min="0" value="54" required>
                         </div>
                     </div>
                     <div class="form-group col-12 col-sm-3">
@@ -202,7 +202,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text">(</span>
                             </div>
-                            <input type="number" class="form-control no-arrows phone_area" name="phone_area" min="0" required>
+                            <input type="number" class="form-control no-arrows phone_number" name="mobile_area" min="0" required>
                             <div class="input-group-append">
                                 <span class="input-group-text">)</span>
                             </div>
@@ -229,7 +229,7 @@
                     </div>
                     <label for="band" class="col-12 col-sm-3 col-form-label">Grupo / Banda</label>
                     <div class="col-12 col-sm-3">
-                        <input type="text" class="form-control" name="band" id="band" min="0" maxlength="255" value="{{ old('band') }}">
+                        <input type="text" class="form-control" name="band" id="band" min="0" maxlength="255" >
                     </div>
                 </div>
                 <div class="form-group row">

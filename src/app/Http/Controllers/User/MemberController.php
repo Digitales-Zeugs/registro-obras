@@ -54,7 +54,7 @@ class MemberController extends Controller
         try {
             $params = $request->only([ 'name', 'birth_date', 'birth_city_id', 'birth_city_text', 'birth_state_id', 'birth_state_text',
                 'birth_country_id', 'doc_number', 'doc_country', 'work_code', 'address_street', 'address_number', 'address_floor', 'address_apt',
-                'address_zip', 'address_city_id', 'address_city_text', 'address_state_id', 'address_state_text', 'address_country_id', 'landline',
+                'address_zip', 'address_city_id', 'address_city_text', 'address_state_id', 'address_state_text', 'address_country_id', 'landline_country', 'landline_area', 'landline', 'mobile_country', 'mobile_area',
                 'mobile', 'email', 'pseudonym', 'band', 'entrance_work', 'genre_id', 'work_id' ]);
 
             $params['user_id'] = Auth::user()->id;
@@ -139,7 +139,7 @@ class MemberController extends Controller
         try {
             $params = $request->only([ 'name', 'birth_date', 'birth_city_id', 'birth_city_text', 'birth_state_id', 'birth_state_text',
                 'birth_country_id', 'doc_number', 'doc_country', 'work_code', 'address_street', 'address_number', 'address_floor', 'address_apt',
-                'address_zip', 'address_city_id', 'address_city_text', 'address_state_id', 'address_state_text', 'address_country_id', 'landline',
+                'address_zip', 'address_city_id', 'address_city_text', 'address_state_id', 'address_state_text', 'address_country_id','landline_country', 'landline_area', 'landline', 'mobile_country', 'mobile_area',
                 'mobile', 'email', 'pseudonym', 'band', 'entrance_work', 'genre_id' ]);
 
             $params['address_floor'] = $request->input('address_floor', null) ?? '';

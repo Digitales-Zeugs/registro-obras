@@ -45,11 +45,15 @@ class MemberRequest extends FormRequest
             'address_state_text' => 'string|max:50|nullable',
             'address_state_id'   => 'integer',
             'address_country_id' => 'string|max:15|required',
+            'landline_country'   => 'string|max:5|nullable',
+            'landline_area'      => 'string|max:10|nullable',
             'landline'           => 'string|max:15|nullable',
+            'mobile_country'     => 'string|max:15|required',
+            'mobile_area'        => 'string|max:15|required',
             'mobile'             => 'string|max:15|required',
             'email'              => 'email|required',
             'pseudonym'          => 'string|max:255|required',
-            'band'               => 'string|max:255',
+            'band'               => 'string|max:255|nullable',
             'entrance_work'      => 'string|max:255|required',
             'genre_id'           => 'integer|required'
         ];
@@ -86,20 +90,5 @@ class MemberRequest extends FormRequest
             'genre_id'            => 'género'
         ];
     }
-/////Agregado 24102022
-    public function messages()
-    {
-        return [
-            'air_date.required_if'        => 'La solicitud tiene que incluir la fecha de incio de emisión del aviso',
-            'ads_duration.required_if'    => 'La solicitud tiene que incluir la duración de los avisos',
-            'ads_duration.*.required_if'  => 'La solicitud tiene que incluir la duración de los avisos',
-            'product_brand.required_if'   => 'La solicitud tiene que incluir la marca del producto',
-            'product_type.required_if'    => 'La solicitud tiene que incluir el tipo del producto',
-            'product_name.required_if'    => 'La solicitud tiene que incluir el nombre del producto',
-            'work_title.required_if'      => 'La solicitud tiene que incluir el título de la obra a incluir',
-            'advertiser.cuit.required_if' => 'La solicitud tiene que incluir los datos del anunciante',
-            'agency.cuit.required_if'     => 'La solicitud tiene que incluir los datos de la agencia / productora',
-            'applicant.cuit.required'     => 'La solicitud tiene que incluir los datos del solicitante'
-        ];
-    }    
+   
 }
